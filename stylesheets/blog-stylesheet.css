@@ -1,24 +1,66 @@
-#container {
-	background-color: #525C66;
-	width: 750px;
-	margin: 0
-	 auto;
-	padding: 5px 0px;
+p.me{
+	vertical-align: middle;
+
+	font-size: 4em;
+	display: inline;
+}
+img.me{
+	padding: 10px;
+	width: 200px;
+	height: 230px;
 }
 
+td.navbar{
+	width:20%;
+	text-align: center;
+
+}
+a.navbar{
+	
+}
+
+
 #content {
-	float: left;
-	background-color: #F0F8FF;
-	color: #525C66;
+	position: relative;
+	left: 125px;
+	background-color: #F0F8FF;;
 	padding: 10px;
-	width: 500px;
+	width: 750px;
 	margin: 5px;
 	padding: 5px;
 }
 
+#footer{
+	z-index: 10;
+	position:fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: #F0F8FF;
+}
+#header{
+	z-index: 10;
+	background-color: #F0F8FF;
+	width:100%;
+	position: fixed;
+	display: inline-block;
+}
+
+#main {
+	z-index:1;
+	color: #F0F8FF;
+	position:relative;
+	top:400px;
+	display: block;
+	background-color: #B8CFE6;
+	text-align: center;
+}
+
 #sidebarLeft{
-	float: left;
-	width: 100px;
+	position: fixed;
+	width: 108px;
 	background-color: #B8CFE6;
 	margin: 5px 5px 5px 0px;
 	padding: 5px;
@@ -26,57 +68,46 @@
 	font-family: Helvetica, sans-serif;
 }
 
-#sidebarRight{
-	float: left;
-	width: 100px;
-	background-color: #B8CFE6;
-	margin: 5px 0px 5px 5px;
-	padding: 5px;
-	text-align: center;
-	font-family: Helvetica, sans-serif;
-}
-
 a:link {
-	text-decoration: underline;
+	text-decoration: none;
 	display: block;
 }
 a:visited {
 	color: #6E6C64;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover, a:active, a:focus {
 	text-decoration: none;
 	font-weight: 900;
+	background-color: #CDDDEE;
 }
 
 body {
-	background-color: #000000;
+	background-color: #3F4E59;
+	color: #2E5573;
+	margin:0;
+	padding:0;
 }
 
 div {
 	display: inline-block;
 }
 
-div li {
-	list-style-type: none;
-	padding: 5px;
-}
-
 table {
 	border: 3px solid black;
-	width:100%;
-	padding: 0px;
+	width: 100%;
+
 }
 
 table tr td a {
-	border: 1px solid black;
+	text-decoration: none;
+	border: px solid black;
 	padding:5px;
 }
 
 table tr td p {
 	font-size: 1.5em;
 }
-
 
 table tr th {
 	width: 33%;

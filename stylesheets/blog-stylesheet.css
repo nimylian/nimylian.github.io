@@ -1,6 +1,5 @@
 p.me{
 	vertical-align: middle;
-
 	font-size: 4em;
 	display: inline;
 }
@@ -10,13 +9,23 @@ img.me{
 	height: 230px;
 }
 
+
 td.navbar{
 	width:20%;
 	text-align: center;
-
 }
-a.navbar{
-	
+
+.exampleSpace{
+	display: block;
+	width:auto;
+	background-color:#ffffff;
+	padding:4px;
+	padding-left:7px;
+	border-left:10px solid #0961A6;
+	border-right: 10px solid #0961A6;
+	font-size:1.8em;
+	font-family:Garamond;
+	border-radius:6px;
 }
 
 
@@ -28,6 +37,15 @@ a.navbar{
 	width: 750px;
 	margin: 5px;
 	padding: 5px;
+}
+
+#example{
+	position:relative;
+	top:100px;
+	left:250px;
+	width:100px;
+	height:100px;
+	background-color: #3F4E59;
 }
 
 #footer{
@@ -93,6 +111,8 @@ div {
 	display: inline-block;
 }
 
+
+
 table {
 	border: 3px solid black;
 	width: 100%;
@@ -105,7 +125,7 @@ table tr td a {
 	padding:5px;
 }
 
-table tr td p {
+table tr td p,li {
 	font-size: 1.5em;
 }
 

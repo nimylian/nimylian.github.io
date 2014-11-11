@@ -1,14 +1,46 @@
-p.me{
-	vertical-align: middle;
-	font-size: 4em;
-	display: inline;
-}
-img.me{
-	padding: 10px;
-	width: 200px;
-	height: 230px;
+a {
+	text-decoration: none;
+	padding:5px;
 }
 
+a:link {
+	display: block;
+}
+a:visited {
+	color: #6E6C64;
+}
+a:hover, a:active, a:focus {
+	font-weight: 900;
+	background-color: #CDDDEE;
+}
+
+body {
+	font-family: times,serif;
+	background-color: #3F4E59;
+	color: #2E5573;
+	margin:0;
+	padding:0;
+}
+
+div{ 
+border-radius: 10px;
+}
+
+ol{
+	padding-right: 40px;
+}
+table {
+	border: 3px solid black;
+	width: 100%;
+	border-radius: 10px;
+	height:100%;
+}
+
+table tr th {
+	width: 33%;
+	padding: 5px;
+	text-align: center;
+}
 
 td.navbar{
 	width:20%;
@@ -28,15 +60,25 @@ td.navbar{
 	border-radius:6px;
 }
 
+#blockBottom{
+	position:fixed;
+	bottom:0px;
+	height:25px;
+	width: 100%;
+	z-index:3;
+	background-color: #3F4E59;
+}
 
 #content {
 	position: relative;
 	left: 125px;
-	background-color: #F0F8FF;;
+	background-color: #B8CFE6;
 	padding: 10px;
-	width: 750px;
-	margin: 5px;
+	width: 75%;
+	margin: 5px 5px 81px 5px;
 	padding: 5px;
+	z-index:1;
+
 }
 
 #example{
@@ -47,23 +89,28 @@ td.navbar{
 	height:100px;
 	background-color: #3F4E59;
 }
+#exampleStatic{
+	width:0px;
+	height:155px;
+	background-color: red;
+
+}
+#exampleText{
+	position:absolute;
+	bottom:20px;
+	left:15px;
+	padding: 0px 40px;
+}
 
 #footer{
 	z-index: 10;
 	position:fixed;
-	bottom: 0px;
+	bottom: 20px;
 	left: 0px;
 	width: 100%;
-	height: 50px;
+	height: 56px;
 	text-align: center;
 	background-color: #F0F8FF;
-}
-#header{
-	z-index: 10;
-	background-color: #F0F8FF;
-	width:100%;
-	position: fixed;
-	display: inline-block;
 }
 
 #main {
@@ -79,58 +126,9 @@ td.navbar{
 #sidebarLeft{
 	position: fixed;
 	width: 108px;
-	background-color: #B8CFE6;
+	background-color: #F0F8FF;
 	margin: 5px 5px 5px 0px;
 	padding: 5px;
 	text-align: center;
 	font-family: Helvetica, sans-serif;
-}
-
-a:link {
-	text-decoration: none;
-	display: block;
-}
-a:visited {
-	color: #6E6C64;
-	text-decoration: none;
-}
-a:hover, a:active, a:focus {
-	text-decoration: none;
-	font-weight: 900;
-	background-color: #CDDDEE;
-}
-
-body {
-	background-color: #3F4E59;
-	color: #2E5573;
-	margin:0;
-	padding:0;
-}
-
-div {
-	display: inline-block;
-}
-
-
-
-table {
-	border: 3px solid black;
-	width: 100%;
-
-}
-
-table tr td a {
-	text-decoration: none;
-	border: px solid black;
-	padding:5px;
-}
-
-table tr td p,li {
-	font-size: 1.5em;
-}
-
-table tr th {
-	width: 33%;
-	padding: 5px;
-	text-align: center;
 }

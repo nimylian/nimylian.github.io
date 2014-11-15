@@ -44,7 +44,7 @@
 							<br>
 							<div class="exampleSpace"> &num;NumberThree &lcub;<br>&nbsp;&nbsp;&nbsp;position: absolute;<br>&nbsp;&nbsp;&nbsp;top: 100px;<br>&nbsp;&nbsp;&nbsp;left: 250px;<br>&rcub;</div>
 							<p>So, if &lt;div id="NumberThree"&gt;was nested inside of &lt;div id="NumberTwo"&gt; it would be positioned 200 pixels from the top and 500 pixels from the left of the browser window.</p>
-							<li>Relative position is located relative to where it should fall in the normal flow of the code. You define its location in a similar way to Absolute and Fixed, but the starting point is wherever the element should have been.</li>
+							<li>Relative position is located relative to where it should fall in the normal flow of the code. You define its location in a similar way to Absolute and Fixed, but the starting point is wherever the element should have been. There is one caveat: the element with relative position must be contained inside of another element that does <strong>NOT</strong> have Static Position.</li>
 							<br>
 							<div class="exampleSpace"> &num;NumberFour &lcub;<br>&nbsp;&nbsp;&nbsp;position: relative;<br>&nbsp;&nbsp;&nbsp;top: 100px;<br>&nbsp;&nbsp;&nbsp;left: 250px;<br>&nbsp;&nbsp;&nbsp;width: 100px;<br>&nbsp;&nbsp;&nbsp;height: 100px;<br>&nbsp;&nbsp;&nbsp;background-color: #3F4E59;<br>&rcub;</div>
 							<p>In this case, you have to see the HTML to know where the &lt;div&gt; will show up. 

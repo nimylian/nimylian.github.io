@@ -56,6 +56,7 @@ td.navbar{
 	margin: 5px 5px 81px 5px;
 	padding: 5px;
 	z-index:1;
+	font-size: 1.5em;
 }
 .content a:link {
 	text-decoration: underline;

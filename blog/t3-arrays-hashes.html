@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>John's Blog</title>
+		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+	</head>
+	<body>
+		<div id="sidebarLeft">
+			<table>
+				<tr><td><a href="../index.html">Home</a></td></tr>
+				<tr><td><a href="./c3_thinking-style.html">11/15/2014</a></td></tr>
+				<tr><td><a href="./t3-arrays-hashes.html">11/12/2014</a></td></tr>
+				<tr><td><a href="./t2-css-design.html">11/8/2014</a></td></tr>
+				<tr><td><a href="./c1-chefs-kitchen.html">11/1/2014</a></td></tr>
+				<tr><td><a href="./t1-git-blog.html">10/31/2014</a></td></tr>
+			</table>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th><a href="./t2-css-design.html">Previous</a></th>
+					<th><h2>November 12<br>2014</h2></th>
+					<th><a href="./c3_thinking-style.html">Next</a></th>
+				</tr>
+				<tr><th colspan="3"><h1>Arrays vs. Hashes</h1></th>
+				</tr>
+				<tr>
+					<td style="padding:10px" colspan="3">
+						<p>Both arrays and hashes are useful to group individual objects in your code. They both work with a simliar structure based on key-value pairing, and they are both extrememly flexible regarding their contents. The objects that are contained within can be of any type, even including arrays or hashes. That is where the simliarities end, as they both have very unique purposes.</p>
+						<p>The heart of the array is how it organizes information. Everything in an array is arranged sequentially, starting at 0 and counting upwards with integers. These integers represent the keys for the values that will be assigned to them. For example:</p>
+						<div class="exampleSpace">irb(main):001:0> myArray = Array.new ["cat","dog",7.4,[1,2,3]]<br>=> ["cat", "dog", 7.4, [1, 2, 3]]</div>
+						<p>I created this array with the "Array.new" (make sure you capitalize it!) command I assigned it to the variable called, "myArray". Contained within the brackets[] are the objects. Object 0 is the string "cat", object 1 is the string "dog", object 2 is the float number 7.4 and object 3 is an array of integers. What you put in each space is irrelevant. What is important is how you arrange them. Because when you want to retrieve the object from the array you call it like this:</p>
+						<div class="exampleSpace">irb(main):002:0> puts myArray[0]<br>cat<br>=> nil</div>
+						<p>Of course the last line shows that this returns "nil", because puts always returns nil. With this same example, if I was to call the array within the array it would look like this:</p>
+						<div class="exampleSpace">irb(main):003:0> puts myArray[3]<br>1<br>2<br>3<br>=> nil</div>
+						<p>You can also call multiple objects from the array by separating them with commas.</p>
+						<div class="exampleSpace">irb(main):004:0> puts myArray[1,2]<br>dog<br>7.4<br>=> nil</div>
+						<p>If you need to call every object in the array, to perform some action on each of them, you can incrementally call every element in the array by using the ".each" method. In addition, I'll use a "block" to display the data that it calls. (the block is the code that falls between the curly braces {}. A local variable is defined between the pipes || and is then processed like normal code. The variable is used by each object in the array, so it can be processed by the code, and then replaced when the next object is called.)
+						<div class="exampleSpace">irb(main):005:0> myArray.each {|obj| puts obj}<br>cat<br>dog<br>7.4<br>1<br>2<br>3<br>=> ["cat", "dog", 7.4, [1, 2, 3]]</div>
+						<p>Notice that this time it returned "["cat", "dog", 7.4, [1, 2, 3]]" instead of nil. This is because the .each method returns what is in the array.</p>
+						<p>Similar to arrays, hashes organize the objects that they contain with keys. The major difference being that there is no order to those keys, and the keys can be anything. Technically the keys could be numbers, but the hash wouldn't know to put them in order. As a matter of fact, if you wanted to be ridiculous about it, you could make a key an array or even another hash. This is not recommended.</p>
+						<p>Here's an example hash that I am creating with its implicit form. Hashes can also be created with the ".new" method, and arrays can be created implicitly.</p>
+						<div class="exampleSpace">irb(main):001:0> myHash = {"pet1"=>"cat", "pet2"=>"dog", "float"=>7.4, "array"=>[1, 2, 3]}<br>=> {"pet1"=>"cat", "pet2"=>"dog", "float"=>7.4, "array"=>[1, 2, 3]}</div>
+						<p>Once again, I get the returned value from the last evaluated expressions, which in this case happens to be the hash I made. The difference between hashes and arrays isn't just the obvious syntax difference. If I were to try to call an object from the hash, like an array, it wouldn't work.</p>
+						<div class="exampleSpace">irb(main):002:0> myHash[2]<br>=> nil</div>
+						<p>This is because I didn't assign the key "2" to any of my values. In order to call an object from a hash you have to use the appropriate key. If I want to call object 2 (The third object in the hash, which happens to be 7.4) I have to use the key "float".</p>
+						<div class="exampleSpace">irb(main):003:0> puts myHash["float"]<br>7.4<br>=> nil</div>
+						<p>Similar to arrays, you can call multiple elements by separating the keys with commas. You can also use the ".each" method to call the objects incrementally.</p>
+						<div class="exampleSpace">irb(main):004:0> myHash.each {|key,value| puts "#{key} is the key for #{value}"}<br>pet1 is the key for cat<br>pet2 is the key for dog<br>float is the key for 7.4<br>array is the key for [1, 2, 3]<br>=> {"pet1"=>"cat", "pet2"=>"dog", "float"=>7.4, "array"=>[1, 2, 3]}</div>
+						<p> The block used here had to be a bit more complex, because the ".each" method calls ever single item in the hash (key, then value). If I wanted to only call the values, there is a method called ".each_value" (there's also ".each_key") for that.</p>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="footer">
+			<table>
+				<tr>
+					<td class="navbar"><a href="https://twitter.com/JohnASchulz"><img src="../imgs/twitter.png" width="20px" /></a></td>
+					<td class="navbar"><a href="http://www.linkedin.com/in/johnaschulz/"><img src="../imgs/linkedin.png" width="20px"/></a></td>
+					<td class="navbar"><a href="mailto:johnschulz75@gmail.com">Email</a></td>
+					<td class="navbar"><a href="http://www.facebook.com/johnaschulz"><img src="../imgs/facebook.png" width="20px"/></a></td>
+					<td class="navbar"><a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="blockBottom"></div>		
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>John's Blog</title>
+		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+	</head>
+	<body>
+		<div id="sidebarLeft">
+			<table>
+				<tr><td><a href="../index.html">Home</a></td></tr>
+				<tr><td><a href="./c4-tech-issues.html">11/23/2014</a></td></tr>
+				<tr><td><a href="./t4-enumerable-methods.html">11/22/2014</a></td></tr>
+				<tr><td><a href="./c3_thinking-style.html">11/15/2014</a></td></tr>
+				<tr><td><a href="./t3-arrays-hashes.html">11/12/2014</a></td></tr>
+				<tr><td><a href="./t2-css-design.html">11/8/2014</a></td></tr>
+				<tr><td><a href="./c1-chefs-kitchen.html">11/1/2014</a></td></tr>
+				<tr><td><a href="./t1-git-blog.html">10/31/2014</a></td></tr>
+			</table>
+		</div>
+		<div class="content">
+			<table>
+				<tr>
+					<th><a href="./c3_thinking-style.html">Previous</a></th>
+					<th><h2>November 22<br>2014</h2></th>
+					<th><a href="./c4-tech-issues.html">Next</a></th>
+				</tr>
+				<tr><th colspan="3"><h1>.group_by</h1></th>
+				</tr>
+				<tr>
+					<td style="padding:10px" colspan="3">
+						<p>I have to start by giving credit to <a href="http://aftaberski.github.io/">Anna Taberski</a>. If she hadn't shown this to me, while we were pairing, I would've never understood it. Even now I'm referring to our code to make sure I'm explaining it correctly.</p>
+						<p>.group_by does something that few other methods I've come across do. It takes an array or hash, and returns a hash. Most methods will return strings, integers or arrays, but not good 'ole .group_by (.select and .reject are the only others I've found). One would use this method for collecting and reorganizing objects from an array or hash by the result of a block of code.</p>
+						<p>One example of using .group_by would be to take the data grouped into a hash and organize it by commonality. If you wanted to find the even numbers in an array:
+						<div class="exampleSpace">irb(main):001:0> [1,2,3,4,5,6,7,8,9].group_by{|obj| obj%2}<br>=> {1=>[1, 3, 5, 7, 9], 0=>[2, 4, 6, 8]}</div>
+						<p>This shows all of the numbers, from the array, that return a 1, from modulus 2, and the numbers that return 0.</p>
+						<p>This process can be developed into a more elaborate process though.</p>
+						<div class="exampleSpace">irb(main):001:0> ["cat","dog","cow","dolphin","camel","giraffe","elephant"].group_by<br>{|obj|<br>irb(main):002:1* if obj.include?("c")<br>irb(main):003:2> "c"<br>irb(main):004:2> elsif obj.include?("d")<br>irb(main):005:2> "d"<br>irb(main):006:2> elsif obj.include?("e")<br>irb(main):007:2> "e"<br>irb(main):008:2> end<br>irb(main):009:1> }<br>=> {"c"=>["cat", "cow", "camel"], "d"=>["dog", "dolphin"], "e"=>["giraffe", "elephant"]}</div>
+						<p>I realize that camel has a "c" and an "e", but since the first if statement satisfied the condition on .include?("c") the .group_by moved on to the next item in the array.</p>
+						<p>You can also do this with hashes. In the code that Anna and I wrote, we used a hash to store our boots and their group number, and then used .group_by to put them into arrays that we could more easily manage.(This is only a fraction of the list)
+						<div class="exampleSpace"> irb(main):001:0> {"Edward Mitchell"=>1, "John Nicholas Mandalakas"=>2, "Matthew Gray"=>3, "Aaron Harris"=>4, "Gabriela Voicu"=>5}.group_by{|k,v| v}
+						<br>=>{1=>[["Edward Mitchell", 1]], 2=>[["John Nicholas Mandalakas", 2]], 3=>[["Matthew Gray", 3]], 4=>[["Aaron Harris", 4]], 5=>[["Gabriela Voicu", 5]]}
+						</div>
+						<p>After this we obviously had to clean it up, but you can see how each name/number array is grouped into a numbered hash. The actual hash contained several arrays of arrays {1 => [[Name,1],[Name,1],[Name,1],[Name,1]], 2 => [[Name,2],[Name,2],[Name,2],[Name,2]], ...}</p>						
+						<p>In the end, the most important thing to realize when using .group_by is that the keys will always be what is returned in the block, and the values are going to be what is passed into the block. If you're passing a single object, like with an array, your values will be single objects. If you're passing multiple objects, like with a hash, your values will be arrays of objects(key/value pairs).</p>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="footer">
+			<table>
+				<tr>
+					<td class="navbar"><a href="https://twitter.com/JohnASchulz"><img src="../imgs/twitter.png" width="20px" /></a></td>
+					<td class="navbar"><a href="http://www.linkedin.com/in/johnaschulz/"><img src="../imgs/linkedin.png" width="20px"/></a></td>
+					<td class="navbar"><a href="mailto:johnschulz75@gmail.com">Email</a></td>
+					<td class="navbar"><a href="http://www.facebook.com/johnaschulz"><img src="../imgs/facebook.png" width="20px"/></a></td>
+					<td class="navbar"><a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="blockBottom"></div>		
+	</body>
+</html>

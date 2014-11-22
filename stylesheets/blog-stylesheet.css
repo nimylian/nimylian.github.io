@@ -23,7 +23,7 @@ body {
 }
 
 div{ 
-border-radius: 10px;
+	border-radius: 10px;
 }
 
 ol{
@@ -86,7 +86,7 @@ td.navbar{
 	position:fixed;
 	bottom:0px;
 	left:0px;
-	height:35px;
+	height:20px;
 	width: 100%;
 	z-index:3;
 	background-color: #3F4E59;
@@ -111,15 +111,20 @@ a:hover#blogTitle, a:active#blogTitle, a:focus#blogTitle{
 	background-color: #CDDDEE;
 }
 
+#footer table{
+	background-color: #F0F8FF;
+}
 #footer{
+	opacity: .6;
 	z-index: 10;
 	position:fixed;
-	bottom: 20px;
+	bottom: 0px;
 	left: 0px;
 	width: 100%;
 	height: 56px;
+	padding-bottom: 20px;
 	text-align: center;
-	background-color: #F0F8FF;
+	background-color: #3F4E59;
 }
 
 #main {

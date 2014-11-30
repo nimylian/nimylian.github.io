@@ -121,6 +121,7 @@ section p{
 	border-right: 10px solid #0961A6;
 	font-size:1.5em;
 	font-family:Garamond;
+	word-wrap: normal;
 	border-radius:6px;
 	box-shadow: 5px 5px 15px #2E5573;
 }

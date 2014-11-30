@@ -58,15 +58,7 @@ td.navbar{
 	text-align: center;
 	background-color: #F0F8FF;
 }
-#header{
-	position: fixed;
-	top:10px;
-	height:181px;
-	width: 100%;
-	background-color: #F0F8FF;
-	display: inline-block;
-	z-index: 10;
-}
+
 
 #navbar{
 	z-index: 10;
@@ -108,11 +100,4 @@ td.navbar{
 	width: 100%;
 	z-index:3;
 	background-color: #3F4E59;
-}
-#title {
-	position: absolute;
-  top: 50%;
-	height:10em;
-	text-align: center;
-	display:inline;
 }

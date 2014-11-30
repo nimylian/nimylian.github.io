@@ -1,6 +1,6 @@
 a {
 	text-decoration: none;
-	padding:5px;
+	padding:0px;
 }
 
 a:link {
@@ -26,9 +26,82 @@ div{
 	border-radius: 10px;
 }
 
+footer table{
+	background-color: #F0F8FF;
+}
+
+footer{
+	opacity: .3;
+	z-index: 10;
+	position:fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 56px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color: #3F4E59;
+}
+
+header{
+	position: fixed;
+	top:30px;
+	width:525px;
+	background-color: #F0F8FF;
+	display: inline-block;
+	z-index: 10;
+	opacity: .8;
+	box-shadow: 10px 10px 0px;
+}
+
+nav a:link {
+	width: 20%;
+	text-align: center;
+	display: inline-block;
+	font-size: 1.5em;
+	color: ;
+	margin: -2px;
+	border-radius: 5px;
+	background-color: transparent;
+	color: #CDDDEE;
+}
+
+nav a:visited {
+	color: #7490A6;
+}
+nav a:hover, nav a:active, nav a:focus {
+	font-weight: 900;
+	color: #3F4E59;
+	background-color: #CDDDEE;
+}
+nav {
+	width: 100%;
+	position:fixed;
+	background-color: #2E5573;
+	z-index: 10;
+}
+
 ol{
 	padding-right: 40px;
 }
+
+section {
+	z-index:1;
+	opacity: .6;
+	color: #2E5573;
+	background-color:#F0F8FF;
+	position: absolute;
+	top: 300px;
+	left: 175px;
+	display: block;
+	text-align: center;
+	width:80%;
+	margin: 0px auto 80px auto;
+	border-radius: 10px;
+	border-left:10px solid #3F4E59;
+	border-right: 10px solid #3F4E59;
+}
+
 table {
 	border: 3px solid black;
 	width: 100%;
@@ -58,7 +131,8 @@ td.navbar{
 	z-index:1;
 	font-size: 1.5em;
 }
-.content a:link {
+
+/*.content a:link {
 	text-decoration: underline;
 	padding: 0px;
 	display: inline;
@@ -67,6 +141,7 @@ td.navbar{
 	font-weight: normal;
 	background-color: #B8CFE6;
 }
+*/
 
 .exampleSpace{
 	display: block;
@@ -86,7 +161,7 @@ td.navbar{
 	position:fixed;
 	bottom:0px;
 	left:0px;
-	height:20px;
+	height:10px;
 	width: 100%;
 	z-index:3;
 	background-color: #3F4E59;
@@ -98,7 +173,7 @@ td.navbar{
 	font-weight: bold;
 	background-color: #F0F8FF;
 }
- a:link#blogTitle {
+a:link#blogTitle {
 	display: block;
 }
 
@@ -111,32 +186,6 @@ a:hover#blogTitle, a:active#blogTitle, a:focus#blogTitle{
 	background-color: #CDDDEE;
 }
 
-#footer table{
-	background-color: #F0F8FF;
-}
-#footer{
-	opacity: .6;
-	z-index: 10;
-	position:fixed;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	height: 56px;
-	padding-bottom: 20px;
-	text-align: center;
-	background-color: #3F4E59;
-}
-
-#main {
-	z-index:1;
-	color: #F0F8FF;
-	position:relative;
-	top:400px;
-	display: block;
-	background-color: #B8CFE6;
-	text-align: center;
-}
-
 #sidebarLeft{
 	position: fixed;
 	width: 108px;
@@ -146,13 +195,11 @@ a:hover#blogTitle, a:active#blogTitle, a:focus#blogTitle{
 	text-align: center;
 	font-family: Helvetica, sans-serif;
 }
-
-#tableOfContents{
-	display: block;
-	width:80%;
-	text-align: center;
-	margin: auto;
-	background-color:#F0F8FF;
-	border-left:10px solid #3F4E59;
-	border-right: 10px solid #3F4E59;
+#title {
+	position: absolute;
+  top: 25%;
+	height:10em;
+	text-align: left;
+	display:inline;
+	width: 331px;
 }

@@ -4,13 +4,14 @@ a {
 }
 
 a:link {
+	border-radius: 15px;
 	display: block;
 }
 a:visited {
 	color: #000;
 }
 a:hover, a:active, a:focus {
-	font-weight: 900;
+	box-shadow: 0px 0px 20px 15px #2E5573;
 	background-color: #2E5573;
 	color: #F0F8FF;
 }
@@ -23,7 +24,7 @@ article{
 body {
 	font-family: times,serif;
 	background-image: url("../imgs/background.jpg");
-	background-size: 50%;
+	background-size: 50% 100%;
   background-repeat: repeat-x;
   background-attachment: fixed;
 	color: #2E5573;
@@ -33,10 +34,6 @@ body {
 
 div{ 
 	border-radius: 10px;
-}
-
-footer table{
-	background-color: #F0F8FF;
 }
 
 footer{
@@ -53,15 +50,20 @@ footer{
 
 header{
 	font-size: 2.5em;
-	text-indent: 20%;
 	position: fixed;
-	top:55px;
+	top:75px;
 	width:100%;
-	height:100px;
+	height:80px;
 	background-color: #F0F8FF;
 	display: inline-block;
 	z-index: 11;
 	box-shadow: 10px 10px 30px;
+}
+header p{
+	text-indent: 250px;
+	margin-top: 20px;
+	font-size: 1.2em;
+	text-shadow: 2px 2px 7px #2E5573;
 }
 
 nav a:link {
@@ -80,7 +82,7 @@ nav a:visited {
 	color: #7490A6;
 }
 nav a:hover, nav a:active, nav a:focus {
-	font-weight: 900;
+	font-weight: bold;
 	color: #3F4E59;
 	background-color: #CDDDEE;
 }
@@ -97,7 +99,7 @@ ol{
 
 section {
 	z-index:10;
-	opacity: .8;
+	opacity: .9;
 	color: #2E5573;
 	text-align: center;
 	background-color:#F0F8FF;
@@ -108,10 +110,25 @@ section {
 	border-left:10px solid #3F4E59;
 	border-right: 10px solid #3F4E59;
 }
+section a:link {
+	border-radius: 5px;
+	display: block;
+}
+section a:visited {
+	color: #000;
+}
+section a:hover, section a:active, section a:focus {
+	box-shadow: 0px 0px 10px 5px #2E5573;
+	background-color: #2E5573;
+	color: #F0F8FF;
+}
 section p{
 	font-size: 1.5em;
 }
-
+section h5{
+	font-weight: lighter;
+	margin: 2px 0px;
+}
 .exampleSpace{
 	display: block;
 	width:auto;
@@ -158,10 +175,13 @@ a:hover#blogTitle, a:active#blogTitle, a:focus#blogTitle{
 }
 #quoteBox{
 	box-shadow: 5px 5px 20px #2E5573;
-	width:260px; 
-	height:250px; 
-	margin:10px; 
-	padding:5px; 
+	position: fixed;
+	top: 70px;
+	right: 5px;
+	width: 25%; 
+	height: auto; 
+	margin: 10px; 
+	padding: 5px; 
 	background-color: rgba(0, 133, 208, 0.75); 
 	text-align: center; 
 	font-size:.4em; 

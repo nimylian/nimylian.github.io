@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>John's Blog</title>
+		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+	</head>
+	<body>
+	<div id = "wrapper">
+		<nav>
+			<a href="../about/index.html">About</a>
+			<a href="../index.html">Blog</a>
+			<a href="../portfolio/index.html">Portfolio</a>
+			<a href="../education/index.html">Education</a>
+			<a href="../experience/index.html">Experience</a>
+		</nav>
+		<div id="sidebarLeft">
+				<div><a href="../index.html">Home</a></div>
+				<div><a href="./t6-oop-concepts.html">12/6/2014</a></div>
+				<div><a href="./c5-feedback.html">11/30/2014</a></div>
+				<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
+				<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
+				<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
+				<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
+				<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
+				<div><a href="./t2-css-design.html">11/8/2014</a></div>
+				<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
+				<div><a href="./t1-git-blog.html">10/31/2014</a></div>
+		</div>
+		<section id="blogPost">
+			<div class="toAndFro"><a href="./t1-git-blog.html">Previous</a></div>
+			<div style="display:inline-block; float:left; width:40%"><h2>November 1<br>2014</h2></div>
+			<div class="toAndFro"><a href="./t2-css-design.html">Next</a></div>
+			<div style="display:inline-block; float:center; width:70%">
+				<h1>Variable Scope</h1>
+			</div>
+			<article>
+				<p>In Ruby, variables act as the pointers to the location of other data. Although they appear to, they do not store the data itself. They only act as a reference to a memory location that some data has been stored in. Regardless of the specifics of how they work, if you assign two different values to the same variable, the first value will be lost. Variables can only store one object at a time. To cope with this variables are given scope. Scope denotes where a variable is visible. If you try to access a variable outside of its scope you will get an error. </p>
+				<p>The broadest scope is given to constants. Constants have what is called a global scope. That means they can be seen anywhere within your code. Constants are mathematical values that are the same regardless of what your code is doing. They represent basic laws of the universe, like pi or e. In addition to the preset "laws of the universe", you as the programmer can create your own constants. Once you assign a variable, that is named with ALL_CAPITAL_LETTERS, a value that variable is now a constant and will behave in all the ways of the mathematical constants. Despite the name constant, they are actually just like any other object in Ruby. They have attributes and methods that can be used to manipulate the constant itself. Of course this is not recommended, and even if you mean to do it, Ruby will send you a warning. </p>
+				<div class="exampleSpace">irb(main):001:0> MY_NEW_CONSTANT = 100<br>=> 100<br>irb(main):002:0> MY_NEW_CONSTANT = 200<br>(irb):2: warning: already initialized constant MY_NEW_CONSTANT<br>(irb):1: warning: previous definition of MY_NEW_CONSTANT was here<br>=> 200</div>
+				<p>There are also global variables. These are similar to constants, because they can be accessed anywhere in the program. They are represented by starting with a dollar-sign($), and unlike constants, you get no warning if you change a global variable. This can make global variables dangerous to use. Often times you'll use variables of the same name as counters or as temporary placeholders. If those variables have a global scope you may get unexpected results.
+				<div class="exampleSpace">irb(main):001:0> $my_global_variable = 50<br>=> 50<br>irb(main):002:0> $my_global_variable = 25<br>=> 25</div>
+				<p>If you want to limit the scope of a variable to just a particular class of objects you can use class variables. These are denoted by starting the variable with two at-signs(@@). The example that always comes to mind for the purpose of class variables would be a parking lot. In the lot you have many cars (which are instantiations of the Car class). We would use a class variable to denote how many cars are in the lot (@@number_of_cars). If a car leaves or enters, it changes the class variable to reflect +1 or -1. Every single car in the class Car has this variable with them, and when each Car object was created it inherited access to the @@number_of_cars variable.</p>
+				<div class="exampleSpace">
+					class Car<br>	
+					&nbsp;&nbsp;@@number_of_cars = 0<br>	
+					&nbsp;&nbsp;def initialize<br>		
+					&nbsp;&nbsp;&nbsp;&nbsp;@size_of_car = 1 #number of parking spots<br>	
+					&nbsp;&nbsp;end<br>
+					&nbsp;&nbsp;def enter_lot<br>		
+					&nbsp;&nbsp;&nbsp;&nbsp;@@number_of_cars = @@number_of_cars + @size_of_car<br>
+					&nbsp;&nbsp;end<br>
+					&nbsp;&nbsp;def exit_lot<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@@number_of_cars = @@number_of_cars - @size_of_car<br>
+					&nbsp;&nbsp;end<br>
+					&nbsp;&nbsp;def how_many_cars<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@@number_of_cars<br>
+					&nbsp;&nbsp;end<br>
+					end<br>
+					car1 = Car.new<br>
+					car2 = Car.new<br>
+					car3 = Car.new<br>
+					car1.enter_lot<br>
+					p car1.how_many_cars<br>
+					car2.enter_lot<br>
+					p car1.how_many_cars<br>
+					car3.enter_lot<br>
+					p car1.how_many_cars<br>
+					car2.exit_lot<br>
+					p car1.how_many_cars<br>
+					p car2.how_many_cars
+					<div class="exampleSpaceOutput"><b>OUTPUT:</b><br>1<br>2<br>3<br>2<br>2</div>				
+				</div>
+				<p>The scope of the entire class is too broad if you want to be able to use a variable within a single object though. Since many objects can be instantiated from a single class, and they will all have the same attributes with different values. They can't all be using the same variables. This is where instance variables come in. They are started with a single at-sign(@). These variables are only accessible within the object itself. They are the equivalent of your personal characteristics and thoughts. No matter how much another Person object wishes to do so, without proper access they can not change your weight. This means that only methods that function within the object can affect the variables. If a different object needs to access a variable, then they need a getter or setter to do so.</p>
+				<p>Getters and Setters are methods contained within an object that allow the object to be accessed externally. Using @weight as an example of an instance variable we can define the weight of a Person object. In order to increase the value of weight, we would need to use the eat_junk_food method to increase your @weight.  
+				<div class="exampleSpace">
+					class Person<br>
+					&nbsp;&nbsp;def initialize<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@weight = 100<br>
+					&nbsp;&nbsp;end<br>
+					&nbsp;&nbsp;def eat_junk_food<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@weight += 10<br>
+					&nbsp;&nbsp;def show_weight<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@weight<br>
+					&nbsp;&nbsp;end<br>
+					end<br>
+					john = Person.new<br>
+					puts "At the start I weigh #{john.show_weight}"<br>
+					john.eat_junk_food<br>
+					puts "Now I eat junk food"<br>
+					puts "Now I weigh #{john.show_weight}"<br>
+					<div class="exampleSpaceOutput"><b>OUTPUT:</b><br>At the start I weigh 100<br>Now I eat junk food<br>Now I weigh 110</div>				
+				</div>
+				<p>The last kind of variable, with the most limited scope, is the local variable. Local variables can only be started with lowercase letters or underscores(_). They can only be accessed in the block that they were created. Local variables should be used for internal calculations.</p>
+				<div class="exampleSpace">
+					class Person<br>
+					&nbsp;&nbsp;def initialize<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@weight = 100<br>
+					&nbsp;&nbsp;end<br>
+					&nbsp;&nbsp;def eat_junk_food<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@weight += 10<br>
+					&nbsp;&nbsp;def show_weight<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;@weight<br>
+					&nbsp;&nbsp;end<br>
+					&nbsp;&nbsp;def show_weight_in_kilograms<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;kilos = @weight / 2.2
+					&nbsp;&nbsp;end<br>
+					end<br>
+					john = Person.new<br>
+					puts "At the start I weigh #{john.show_weight}"<br>
+					puts "In kilograms that is #{john.show_weight_in_kilograms}"<br>
+					puts "But I can not access the 'kilos' variable"<br>
+					puts kilos<br>
+					<div class="exampleSpaceOutput"><b>OUTPUT:</b><br>/Users/John/Desktop/DevBootCamp/nimylian.github.io/blog/untitled.rb:25:in `&lt;main&gt;': undefined local variable or method `kilos' for main:Object (NameError)<br>At the start I weigh 100<br>In kilograms that is 45.45454545454545<br>But I can not access the 'kilo' variable<br></div>
+				</div>
+			</article>
+		</section>
+		<footer>
+			<nav>
+					<a href="https://twitter.com/JohnASchulz"><img src="../imgs/twitter.png" width="20px" /></a>
+					<a href="http://www.linkedin.com/in/johnaschulz/"><img src="../imgs/linkedin.png" width="20px"/></a>
+					<a href="mailto:johnschulz75@gmail.com">Email</a></td>
+					<a href="http://www.facebook.com/johnaschulz"><img src="../imgs/facebook.png" width="20px"/></a>
+					<a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a>
+			</nav>
+		</footer>
+	</div>
+	</body>
+</html>

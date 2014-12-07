@@ -5,19 +5,27 @@
 		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
 	</head>
 	<body>
+	<div id = "wrapper">
+		<nav>
+			<a href="../about/index.html">About</a>
+			<a href="../index.html">Blog</a>
+			<a href="../portfolio/index.html">Portfolio</a>
+			<a href="../education/index.html">Education</a>
+			<a href="../experience/index.html">Experience</a>
+		</nav>
 		<div id="sidebarLeft">
-			<div><a href="../index.html">Home</a></div>
-			<div><a href="./c5-feedback.html">11/30/2014</a></div>
-			<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
-			<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
-			<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
-			<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
-			<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
-			<div><a href="./t2-css-design.html">11/8/2014</a></div>
-			<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
-			<div><a href="./t1-git-blog.html">10/31/2014</a></div>
+				<div><a href="../index.html">Home</a></div>
+				<div><a href="./c5-feedback.html">11/30/2014</a></div>
+				<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
+				<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
+				<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
+				<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
+				<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
+				<div><a href="./t2-css-design.html">11/8/2014</a></div>
+				<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
+				<div><a href="./t1-git-blog.html">10/31/2014</a></div>
 		</div>
-		<section style="margin-top:20px">
+		<section id="blogPost">
 			<div class="toAndFro"><a href="./c1-chefs-kitchen.html">Previous</a></div>
 			<div style="display:inline-block; float:left; width:40%"><h2>November 8<br>2014</h2></div>
 			<div class="toAndFro"><a href="./t3-arrays-hashes.html">Next</a></div>
@@ -25,8 +33,8 @@
 				<h1>Positioning</h1>
 			</div>
 			<article>
-				<p>Placing the various &lt;div&gt; tags around the screen can be tricky. Rather than manipulating the padding and margins of each &lt;div&gt;, until they are where you want them, you can use the "position" property within the CSS of a particular &lt;div&gt; element. There are a few ways to do this:
-				<p>Begin by assigning an id to the &lt;div&gt; like this, in your HTML: 
+				<p>Placing the various &lt;div&gt; tags around the screen can be tricky. Rather than manipulating the padding and margins of each &lt;div&gt;, until they are where you want them, you can use the "position" property within the CSS of a particular &lt;div&gt; element. There are a few ways to do this:</p>
+				<p>Begin by assigning an id to the &lt;div&gt; like this, in your HTML:</p>
 				<div class="exampleSpace"> &lt;div id="NumberOne"&gt; &lt;/div&gt;</div>
 				<p>Then the fun begins. In your associated CSS file, you need to define what the "id" called "NumberOne" is. This will differentiate it from the rest of the &lt;div&gt; tags. Ids are always started with a &num;, followed by the name. After that, type the curly braces to begin the definition of your id.</p>
 				<p>When defining the position property within the &lt;div&gt; element there are four different types of position properties. They are Static, Fixed, Absolute and Relative.</p>
@@ -34,7 +42,7 @@
 					<li>Static position is the default setting for all HTML elements. It tells the browser to position the &lt;div&gt; tag exactly where it falls in the flow of the code. Because of this, you can not relocate a static element. Because it is the default you only need to define the position as static if you've previously defined all divs as something else.</li> 
 					<br>
 					<div class="exampleSpace"> div &lcub;<br>&nbsp;&nbsp;&nbsp;position: absolute;<br>&rcub;<br>&num;NumberOne &lcub;<br>&nbsp;&nbsp;&nbsp;position: static;<br>&rcub;</div>
-					<p> This shows that the &lt;div&gt; tag with the id "NumberOne" will have a static position, but all other &lt;div&gt; tags will be absolute.
+					<p> This shows that the &lt;div&gt; tag with the id "NumberOne" will have a static position, but all other &lt;div&gt; tags will be absolute.</p>
 					<li>Fixed position is removed from the flow of the code and no matter how hard you scroll, it will always stay in exactly the same place. This is how developers can make a menu float on top of the scrolling body of a page. Because it is not part of the normal flow of code you have to define its locations with other properties, like top, bottom, right, left. These tell the &lt;div&gt; how far from that particular edge of the browser window it will be. There's are two on this page, can you find them?</li>
 					<br>
 					<div class="exampleSpace"> &num;NumberTwo &lcub;<br>&nbsp;&nbsp;&nbsp;position: fixed;<br>&nbsp;&nbsp;&nbsp;top: 100px;<br>&nbsp;&nbsp;&nbsp;left: 250px;<br>&rcub;</div>
@@ -46,7 +54,7 @@
 					<li>Relative position is located relative to where it should fall in the normal flow of the code. You define its location in a similar way to Absolute and Fixed, but the starting point is wherever the element should have been. There is one caveat: the element with relative position must be contained inside of another element that does <strong>NOT</strong> have Static Position.</li>
 					<br>
 					<div class="exampleSpace"> &num;NumberFour &lcub;<br>&nbsp;&nbsp;&nbsp;position: relative;<br>&nbsp;&nbsp;&nbsp;top: 100px;<br>&nbsp;&nbsp;&nbsp;left: 250px;<br>&nbsp;&nbsp;&nbsp;width: 100px;<br>&nbsp;&nbsp;&nbsp;height: 100px;<br>&nbsp;&nbsp;&nbsp;background-color: #3F4E59;<br>&rcub;</div>
-					<p>In this case, you have to see the HTML to know where the &lt;div&gt; will show up. 
+					<p>In this case, you have to see the HTML to know where the &lt;div&gt; will show up. </p>
 					<div style="position:relative; top:100px; left:250px; width:100px;	height:100px; background-color: #3F4E59"></div>
 					<div style = "width:0px; height:240px; background-color: red"></div>
 					<p style="position:relative; bottom:60px;">To show this I've included a relative &lt;div&gt; above. The box is 100 pixels from the top and 250 pixels from the left of where it's supposed to be, on the line below "...the &lt;div&gt; will show up." </p>
@@ -62,5 +70,6 @@
 					<a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a>
 			</nav>
 		</footer>
+	</div>
 	</body>
 </html>

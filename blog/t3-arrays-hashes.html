@@ -5,19 +5,27 @@
 		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
 	</head>
 	<body>
+	<div id = "wrapper">
+		<nav>
+			<a href="../about/index.html">About</a>
+			<a href="../index.html">Blog</a>
+			<a href="../portfolio/index.html">Portfolio</a>
+			<a href="../education/index.html">Education</a>
+			<a href="../experience/index.html">Experience</a>
+		</nav>
 		<div id="sidebarLeft">
-			<div><a href="../index.html">Home</a></div>
-			<div><a href="./c5-feedback.html">11/30/2014</a></div>
-			<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
-			<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
-			<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
-			<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
-			<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
-			<div><a href="./t2-css-design.html">11/8/2014</a></div>
-			<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
-			<div><a href="./t1-git-blog.html">10/31/2014</a></div>
+				<div><a href="../index.html">Home</a></div>
+				<div><a href="./c5-feedback.html">11/30/2014</a></div>
+				<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
+				<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
+				<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
+				<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
+				<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
+				<div><a href="./t2-css-design.html">11/8/2014</a></div>
+				<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
+				<div><a href="./t1-git-blog.html">10/31/2014</a></div>
 		</div>
-		<section style="margin-top:20px">
+		<section id="blogPost">
 			<div class="toAndFro"><a href="./t2-css-design.html">Previous</a></div>
 			<div style="display:inline-block; float:left; width:40%"><h2>November 12<br>2014</h2></div>
 			<div class="toAndFro"><a href="./c3_thinking-style.html">Next</a></div>
@@ -34,7 +42,7 @@
 				<div class="exampleSpace">irb(main):003:0> puts myArray[3]<br>1<br>2<br>3<br>=> nil</div>
 				<p>You can also call multiple objects from the array by separating them with commas.</p>
 				<div class="exampleSpace">irb(main):004:0> puts myArray[1,2]<br>dog<br>7.4<br>=> nil</div>
-				<p>If you need to call every object in the array, to perform some action on each of them, you can incrementally call every element in the array by using the ".each" method. In addition, I'll use a "block" to display the data that it calls. (the block is the code that falls between the curly braces {}. A local variable is defined between the pipes || and is then processed like normal code. The variable is used by each object in the array, so it can be processed by the code, and then replaced when the next object is called.)
+				<p>If you need to call every object in the array, to perform some action on each of them, you can incrementally call every element in the array by using the ".each" method. In addition, I'll use a "block" to display the data that it calls. (the block is the code that falls between the curly braces {}. A local variable is defined between the pipes || and is then processed like normal code. The variable is used by each object in the array, so it can be processed by the code, and then replaced when the next object is called.)</p>
 				<div class="exampleSpace">irb(main):005:0> myArray.each {|obj| puts obj}<br>cat<br>dog<br>7.4<br>1<br>2<br>3<br>=> ["cat", "dog", 7.4, [1, 2, 3]]</div>
 				<p>Notice that this time it returned "["cat", "dog", 7.4, [1, 2, 3]]" instead of nil. This is because the .each method returns what is in the array.</p>
 				<p>Similar to arrays, hashes organize the objects that they contain with keys. The major difference being that there is no order to those keys, and the keys can be anything. Technically the keys could be numbers, but the hash wouldn't know to put them in order. As a matter of fact, if you wanted to be ridiculous about it, you could make a key an array or even another hash. This is not recommended.</p>
@@ -58,5 +66,6 @@
 				<a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a>
 			</nav>
 		</footer>
+	</div>
 	</body>
 </html>

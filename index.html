@@ -3,23 +3,37 @@
 	<head>
 		<title>John Schulz</title>
 		<link "text/css" rel="stylesheet" href="./stylesheets/blog-stylesheet.css">
+		<script type="text/javascript" language="javascript">
+			var slideArray = new Array()
+			slideArray[0]= "“No! Try not. Do or do not. There is no try.”";
+			slideArray[1]= "“Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.”";
+			slideArray[2]= "“Always pass on what you have learned.”";
+			slideArray[3]= "“Always two there are, no more, no less. A master and an apprentice.”";
+			slideArray[4]= "“Difficult to see. Always in motion is the future..”";
+			slideArray[5]= "“Named, must your fear be, before banish it, you can.”";
+			var current_slide = 0;
+			function quoteSlideShow()
+				{ 
+					document.getElementById('quoteBox').innerHTML = slideArray[current_slide];
+					if (current_slide < slideArray.length - 1) current_slide++; else current_slide = 0
+					timer = setTimeout("quoteSlideShow()", 3000);
+				}
+			function stopShow()
+				{
+				  clearTimeout(timer);
+				}
+			function runShow()
+				{
+				  quoteSlideShow();  
+				}
+		</script>
 	</head>
 	<body>
 		<div id = "wrapper">
 		<img style="margin:10px;" id="myPhoto" src="./imgs/john2014.png"/>
 		<header>
 			<p>John Schulz</p>
-			<div id="quoteBox" style="text-indent:0px; overflow: auto;">
-				<br>
-				<h2 style="margin:-15px 0px 2px;">Squirrels,</h2>
-				All we really are is Squirrels,<br>
-				We're being hunted we are Squirrels,<br>
-				We are appealing we are Squirrels,<br>
-				<br>
-				We want to gather nuts,<br>
-				But, people splatter our guts,<br>
-				When they're on a country drive,<br>
-				It isn't easy to survive.
+			<div id="quoteBox" style="text-indent:0px; overflow: auto;" onMouseover="stopShow()" onMouseout="runShow()"><script>quoteSlideShow();</script>
 			</div>
 		</header>
 		<nav>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>John's Blog</title>
+		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+	</head>
+	<body>
+	<div id = "wrapper">
+		<nav>
+			<a href="../about/index.html">About</a>
+			<a href="../index.html">Blog</a>
+			<a href="../portfolio/index.html">Portfolio</a>
+			<a href="../education/index.html">Education</a>
+			<a href="../experience/index.html">Experience</a>
+		</nav>
+		<div id="sidebarLeft">
+			<div><a href="../index.html">Home</a></div>
+			<div><a href="./c7-values.html">12/14/2014</a></div>
+			<div><a href="./t7-JavaScript.html">12/13/2014</a></div>
+			<div><a href="./t6-oop-concepts.html">12/6/2014</a></div>
+			<div><a href="./c5-feedback.html">11/30/2014</a></div>
+			<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
+			<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
+			<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
+			<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
+			<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
+			<div><a href="./t2-css-design.html">11/8/2014</a></div>
+			<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
+			<div><a href="./t1-git-blog.html">10/31/2014</a></div>
+		</div>
+		<section id="blogPost">
+			<div class="toAndFro"><a href="./t6-oop-concepts.html">Previous</a></div>
+			<div style="display:inline-block; float:left; width:40%"><h2>December 13<br>2014</h2></div>
+			<div class="toAndFro"><a href="./c7-values.html">Next</a></div>
+			<div style="display:inline-block; float:center; width:70%">
+				<h1>Objects in Ruby vs JavaScript</h1>
+			</div>
+			<article>
+						<p>Objects are the core of any Object Oriented Programming language, but few openly rely on them more than Ruby. In Ruby everything is an object. Numbers, strings, variables, everything is actually an object at its core, with a set of attributes and methods that define how it interacts with all of the other objects. Since JavaScript is a scripting OOP language, it shares many similarities with Ruby. One strange similarity is in their objects.</p>
+						<p>JavaScript's objects are actually more like Ruby's hashes. They're a collection of attributes (keys) and values that represent what the object is and how it interacts with other objects. Amongst its values can be functions, which are given variables for keys. These functions can be called within the object, much like Ruby would call a method within an object. The key difference is that JavaScript doesn't technically have Classes.</p>
+						<p>JavaScript does have prototypes, which on the surface look like Classes, but are much different. In Ruby, classes can inherit properties from their SuperClasses. These inheritances look like family trees. As you work your way down the tree, the objects become more complicated and specialized. Every object can only have one parent, but could have many children. With prototypes, JavaScript is made more flexible. Because there is not instantiating of objects, only copying of prototypes, one object could actually consist of the attributes of several prototypes. In a post that I read on <a href="http://programmers.stackexchange.com/questions/110936/what-are-the-advantages-of-prototype-based-oop-over-class-based-oop" style="display: inline">StackExchange</a>, it was demonstrated by using the example of an RPG monster called a Steel Golem. This creature would share attributes with other "steel" objects as well as with other "golem" creatures, and it would have characteristics of a "unintelligent monster" also. If this creature was created with classes, it would have a Golem SuperClass, which may have inherited characteristics from the Unintelligent Monster Class, but in order to give it the "steel" attributes that it would have in common with objects like steel swords it would have to include all of that code for each "steel" object. This could become very inefficient.</p>
+						<p>After reading that, I couldn't imagine why every language wouldn't use multiple inheritance or prototyping, and then I read further. Because the attributes are coming from multiple sources, there can be performance issues because everything has to be looked up separately. If your objects become very complicated it can slow your system down. Also, the programmer needs to do much more testing to ensure all of the objects behave exactly the way they're intended.</p>
+						<p>In the end, I've come to the realization, again, that the reason for many languages is because they serve many purposes.</p>
+			</article>
+		</section>
+		<footer>
+			<nav>
+					<a href="https://twitter.com/JohnASchulz"><img src="../imgs/twitter.png" width="20px" /></a>
+					<a href="http://www.linkedin.com/in/johnaschulz/"><img src="../imgs/linkedin.png" width="20px"/></a>
+					<a href="mailto:johnschulz75@gmail.com">Email</a></td>
+					<a href="http://www.facebook.com/johnaschulz"><img src="../imgs/facebook.png" width="20px"/></a>
+					<a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a>
+			</nav>
+		</footer>
+	</div>
+	</body>
+</html>

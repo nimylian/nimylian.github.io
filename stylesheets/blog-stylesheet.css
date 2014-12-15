@@ -16,13 +16,14 @@ a:hover, a:active, a:focus {
 	color: #F0F8FF;
 }
 
+
 article{
 	padding: 5px;
-	text-align:left;
+	text-align: left;
 	opacity: 1.0;
 }
 body {
-	font-family: times,serif;
+	font-family: Times, serif;
 	background-image: url("../imgs/background.jpg");
 	background-size: 50% 100%;
   background-repeat: repeat-x;
@@ -53,7 +54,7 @@ header{
 	position: fixed;
 	top:75px;
 	width:100%;
-	height:80px;
+	height:130px;
 	background-color: #F0F8FF;
 	display: inline-block;
 	z-index: 11;
@@ -63,6 +64,12 @@ header p{
 	text-indent: 250px;
 	margin-top: 20px;
 	font-size: 1.2em;
+	text-shadow: 2px 2px 7px #2E5573;
+}
+header h5{
+	text-indent: 250px;
+	margin-top: -45px;
+	font-size: .5em;
 	text-shadow: 2px 2px 7px #2E5573;
 }
 
@@ -104,7 +111,7 @@ section {
 	text-align: center;
 	background-color:#F0F8FF;
 	width:50%;
-	margin: 175px auto 50px auto;
+	margin: 215px auto 50px auto;
 	padding: 10px;
 	border-radius: 10px;
 	border-left:10px solid #3F4E59;
@@ -212,7 +219,8 @@ a:hover#blogTitle, a:active#blogTitle, a:focus#blogTitle{
 	margin: 10px; 
 	padding: 5px; 
 	background-color: rgba(0, 133, 208, 0.75); 
-	text-align: center; 
+	text-align: center;
+	font-family: Garamond, sans-serif;
 	font-size:.4em; 
 	color:#F0F8FF;
 }

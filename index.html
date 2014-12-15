@@ -14,12 +14,11 @@
 			slideArray[6]= "“Do not judge me by my successes, judge me by how many times I fell down and got back up again.” <br><br>-Nelson Mandela";
 			slideArray[7]= "“There is no need for temples, no need for complicated philosophies. My brain and my heart are my temples; my philosophy is kindness.” <br><br>-Dalai Lama";
 			slideArray[8]= "“I find hope in the darkest of days, and focus in the brightest. I do not judge the universe.” <br><br>-Dalai Lama";
-
+			slideArray[9]= "“Character is defined by the decisions we make when no one is looking.” <br><br>-me";
 			slideArray = shuffle(slideArray)
-
 			var current_slide = 0;
-			//+ Jonas Raoni Soares Silva
-			//@ http://jsfromhell.com/array/shuffle [v1.0]
+			// Based on code by Jonas Raoni Soares Silva
+			// http://jsfromhell.com/array/shuffle [v1.0]
 			function shuffle(o){ //v1.0
 			    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 			    return o;
@@ -51,8 +50,9 @@
 		<div id = "wrapper">
 		<img style="margin:10px;" id="myPhoto" src="./imgs/john2014.png"/>
 		<header>
-			<p>John Schulz</p>
-			<div id="quoteBox" style="text-indent:0px; overflow: auto;" onMouseover="stopShow()" onMouseout="runShow()"><script>quoteSlideShow();</script>
+			<p>John Schulz</p><h5>Software Developer</h5>
+			<div id="quoteBox" style="text-indent:0px;" onMouseover="stopShow()" onMouseout="runShow()">
+				<script>quoteSlideShow();</script>
 			</div>
 		</header>
 		<nav>
@@ -74,6 +74,8 @@
 			<a id="blogTitle" href="./blog/c5-feedback.html">November 30, 2014<br><h5>Pairing and Feedback</h5></a><br><br>
 			<a id="blogTitle" href="./blog/t6-oop-concepts.html">December 6, 2014<br><h5>Variable Scope</h5></a><br><br>
 			<a id="blogTitle" href="./blog/c6-stereotype-threat.html">December 7, 2014<br><h5>Stereotype Threat</h5></a><br><br>
+			<a id="blogTitle" href="./blog/t7-JavaScript.html">December 13, 2014<br><h5>Objects in Ruby vs JavaScript</h5></a><br><br>
+			<a id="blogTitle" href="./blog/c7-values.html">December 14, 2014<br><h5>Values</h5></a><br><br>
 			
 		</section>
 		<footer>

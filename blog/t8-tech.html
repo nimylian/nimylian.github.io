@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>John's Blog</title>
+		<link "text/css" rel="stylesheet" href="../stylesheets/blog-stylesheet.css">
+	</head>
+	<body>
+	<div id = "wrapper">
+		<nav>
+			<a href="../about/index.html">About</a>
+			<a href="../index.html">Blog</a>
+			<a href="../portfolio/index.html">Portfolio</a>
+			<a href="../education/index.html">Education</a>
+			<a href="../experience/index.html">Experience</a>
+		</nav>
+		<div id="sidebarLeft">
+				<div><a href="../index.html">Home</a></div>
+				<div><a href="./c8-conflict.html">1/4/2015</a></div>				
+				<div><a href="./t8-tech.html">12/28/2014</a></div>				
+				<div><a href="./c7-values.html">12/14/2014</a></div>
+				<div><a href="./t7-JavaScript.html">12/13/2014</a></div>
+				<div><a href="./t6-oop-concepts.html">12/6/2014</a></div>
+				<div><a href="./c5-feedback.html">11/30/2014</a></div>
+				<div><a href="./t5-ruby-classes.html">11/29/2014</a></div>
+				<div><a href="./c4-tech-issues.html">11/23/2014</a></div>
+				<div><a href="./t4-enumerable-methods.html">11/22/2014</a></div>
+				<div><a href="./c3_thinking-style.html">11/15/2014</a></div>
+				<div><a href="./t3-arrays-hashes.html">11/12/2014</a></div>
+				<div><a href="./t2-css-design.html">11/8/2014</a></div>
+				<div><a href="./c1-chefs-kitchen.html">11/1/2014</a></div>
+				<div><a href="./t1-git-blog.html">10/31/2014</a></div>
+		</div>
+		<section id="blogPost">
+			<div class="toAndFro"><a href="./c7-values.html">Previous</a></div>
+			<div style="display:inline-block; float:left; width:40%"><h2>December 28<br>2014</h2></div>
+			<div class="toAndFro"><a href="./c8-conflict.html">Next</a></div>
+			<div style="display:inline-block; float:center; width:70%">
+				<h1>What is Rails?</h1>
+			</div>
+			<article>
+				<p>Since all of this learning is going to culminate in Rails, I thought I'd begin exploring what exactly it is.</p>
+				<p>Rails is essentially a software library that extends the functionality of Ruby. Like other libraries, it is called a Gem, and can be installed separate from other Gems. Basically Rails creates a framework for using Ruby to interact with HTML/CSS/JavaScript. This creates the "back-end" of a web app.</p>
+				<p>Because of Rails, web developers are more easily able to maintain and upgrade websites. The conventions that exist create a structure that most developers follow. As a result, when you're looking at a Rails app, you'll be able to easily assess where the parts are, and where they belong.</p>
+				<p>Integral to this structure is the Model-View-Controller pattern. It is a means of keeping your data separate and clean. The Model handles communication with the database. The Controller handles the input from the user at the website. The View handles displaying of the data.</p>
+				<p>To aid in the clarity that is created within the Rails hierarchy, it also automatically creates table names, in your database, that match up with the class names that are implemented. It even has the ability to do so in the logical plural way that we would normally creates table names. If the class is called "Person", then the table that would be generated would be called "People".</p>
+				<p>Rails prefers Convention over Configuration. This means that instead of each user defining how everything works in their own way, Rails has predetermined the "best" ways to do things and users have only to implement them. This doesn't mean that developers are unable to override the conventions to suit their purposes, but it will certainly save time for the pieces that can be standardized. This also means that future developers will be able to read your code more easily.</p>
+				<div class="exampleSpace" style="text-align:center"><h2>References</h2>
+						<a href="http://railsapps.github.io/what-is-ruby-rails.html">What is Ruby on Rails?<br><h1>RailsApps</h1></a>
+						<a href="http://betterexplained.com/articles/starting-ruby-on-rails-what-i-wish-i-knew/">Starting Ruby on Rails: What I Wish I Knew<br><h1>BetterExplained</h1></a>
+						<a href="http://www.tutorialspoint.com/ruby-on-rails/rails-introduction.htm">Ruby on Rails Introduction<br><h1>TutorialsPoint</h1></a>
+						<a href="https://www.railstutorial.org/"><h1>Ruby on Rails Tutorial (3rd Ed.)</h1></a>
+				</div>
+			</article>
+		</section>
+		<footer>
+			<nav>
+					<a href="https://twitter.com/JohnASchulz"><img src="../imgs/twitter.png" width="20px" /></a>
+					<a href="http://www.linkedin.com/in/johnaschulz/"><img src="../imgs/linkedin.png" width="20px"/></a>
+					<a href="mailto:johnschulz75@gmail.com">Email</a></td>
+					<a href="http://www.facebook.com/johnaschulz"><img src="../imgs/facebook.png" width="20px"/></a>
+					<a href="https://github.com/nimylian"><img src="../imgs/github.png" width="20px"/></a>
+			</nav>
+		</footer>
+	</div>
+	</body>
+</html>
